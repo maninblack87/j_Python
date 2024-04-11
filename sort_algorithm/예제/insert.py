@@ -10,10 +10,12 @@ def insertion_sort(arr):
         # 이전 원소와 비교하면서 적절한 위치에 삽입
         while j >= 0 and key < arr[j]:
             arr[j + 1] = arr[j]
+            print(f"i = {i}, j = {j} ,arr = {arr}")
             j -= 1
         
         # 삽입할 위치에 현재 원소 삽입
         arr[j + 1] = key
+        print(f"{i}번째 : {arr}")
 
 # 예제 배열
 arr = [64, 34, 25, 12, 22, 11, 90]
