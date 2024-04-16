@@ -1,17 +1,15 @@
 import json
 
-# json 불러온다
-with open("foods.json", "r") as file:
+# JSON 파일 경로
+file_path = 'foods.json'
+
+# JSON 파일 불러오기
+with open(file_path, 'r') as file:
     data = json.load(file)
 
-# 내가 최근에 먹은 것
-# .. 새우깡
-recent = "새우깡"
+# 불러온 데이터 출력
+print(data)
 
-# 새우깡의 가격을 알아보자
-# for item in data['식사']:
-#     if item['이름'] == recent:
-#         recent_price = item['가격']
-#         break
-    
-# print(f"내가 최근에 먹은 {recent}의 가격은 {recent_price}원 이다.")
+
+
+# ######## 파일을 못 찾겠다고 해서 잠정적 포기
