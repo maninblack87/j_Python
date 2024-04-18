@@ -7,8 +7,8 @@ from tkinter import *
 # 입력하면 출력하는 함수
 # >> ipt는 엔트리
 # >> opt는 레이블
-def update_label(ipt, opt):
-    opt.config(text=ipt.get())
+def update_label(input, output):
+    output.config(text=input.get())
 
 ########################## (종료) 함수 정의 ######
 
