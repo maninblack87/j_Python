@@ -1,35 +1,28 @@
 from tkinter import *
 
-# 임시 함수명 processing
-def processing(input, output):
-    output.config(text=input.get())
-
-# 배열
-arr = []
-
-# GUI
+# 버튼을 클릭하면 이벤트 발생
+def button_click(button_id):
+    print(f"버튼 {button_id}가 클릭되었습니다")
+    
+# tkinter 윈도우 생성
 window = Tk()
-window.title("GUI 테스트~~")
-window.geometry("500x400")
+window.title("반복문으로 생성된 버튼 속성 수정하기")
 
-ipt0 = Entry(window)
-ipt1 = Entry(window)
-ipt2 = Entry(window)
-ipt3 = Entry(window)
-ipt4 = Entry(window)
-ipt5 = Entry(window)
-ipt6 = Entry(window)
-ipt7 = Entry(window)
-btn = Button(window, text="실행", command=lambda:processing)
-
-ipt0.pack()
-ipt1.pack()
-ipt2.pack()
-ipt3.pack()
-ipt4.pack()
-ipt5.pack()
-ipt6.pack()
-ipt7.pack()
-btn.pack()
+# 버튼을 생성하고 배치하는 반복문
+buttons = []
+for i in range(1, 6):
+    if i == 2:
+        button_text = "다른 텍스트"
+        button_bg = "yellow"
+    else:
+        button_text = "버튼" + str(i)
+        button_bg = "lightgray"
+    button = Button(window, text=button_text, bg=button_bg, command=lambda idx=i: button_click(idx))
+    button.pack()
+    buttons.append(button)  # 생성된 버튼을 리스트에 추가
+    
+# 두번째 버튼의 속성 수정
+buttons[3]["text"] = "수정된 텍스트"
+buttons[3]["bg"] = "green"
 
 window.mainloop()
