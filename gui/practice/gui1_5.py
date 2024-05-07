@@ -17,7 +17,7 @@ for i in range(1, 6):
     else:
         button_text = "버튼" + str(i)
         button_bg = "lightgray"
-    button = Button(window, text=button_text, bg=button_bg, command=lambda idx=i: button_click(idx))
+    button = Button(window, text=button_text, bg=button_bg, command=lambda x=i: button_click(x))
     button.pack()
     buttons.append(button)  # 생성된 버튼을 리스트에 추가
     
