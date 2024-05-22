@@ -12,7 +12,7 @@ window.geometry("500x400")
 
 ipt_name = Entry(window)
 opt_name = Label(window)
-confirm  = Button(window, text="확인")
+confirm  = Button(window, text="확인", command=confirm_update_label)
 
 ipt_name.pack()
 opt_name.pack()

@@ -12,7 +12,7 @@ window.geometry("500x400")
 
 input_myname = Entry(window)
 output_myname = Label(window)
-confirm_myname = Button(window, text="확인", command=confirm_update_label(input_myname, output_myname))
+confirm_myname = Button(window, text="확인", command=confirm_update_label)
 
 input_myname.pack()
 output_myname.pack()
