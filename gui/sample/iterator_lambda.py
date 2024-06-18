@@ -1,6 +1,5 @@
 from tkinter import *
 
-
 def button_click(buttons, idx):
     current_bg = buttons[idx]["bg"]
     if current_bg == "lightgray":

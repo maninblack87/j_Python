@@ -11,12 +11,10 @@ root.title("Excel 데이터 표시")
 root.geometry("600x400")
 
 # 레이블 생성
-for i in range(0, 5):
-    frame = tk.Frame()
-    for j in range(0, 3):
-        anyword = tk.StringVar(value=df.iloc[i, j])
-        output_name = tk.Entry(frame, width='10', state='readonly' ,textvariable=anyword)
-        output_name.pack(side='left')
+for j in range(0, 3):
+    anyword = tk.StringVar(value=df.iloc[0, j])
+    output_name = tk.Entry(root,width='10', state='readonly' ,textvariable=anyword)
+    output_name.pack(side='left')
 
 # 이벤트 루프 시작
 root.mainloop()
