@@ -9,7 +9,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Excel 파일로 저장
-excel_file = 'D:\Jeon\python\jeon\withExcel\sample.xlsx'
+excel_file = 'D:\Jeon\python\jeon\withExcel\sample\sample.xlsx'
 df.to_excel(excel_file, index=False)
 
 print("Excel 파일이 저장되었습니다.")
