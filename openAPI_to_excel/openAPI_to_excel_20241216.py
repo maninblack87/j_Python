@@ -54,7 +54,7 @@ def fetch_and_save_data(start_date, last_date):
         # 날짜를 하루씩 증가
         start_date += timedelta(days=1)
 
-# 메인 실행
+# 메인 실행(해당 파이썬을 직접 실행하면 __name__ 은 "__main__"이 됨)
 if __name__ == "__main__":
     # 데이터 다운로드 및 엑셀 파일 저장
     fetch_and_save_data(start_date, last_date)
